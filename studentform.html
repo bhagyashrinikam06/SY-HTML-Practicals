@@ -1,0 +1,90 @@
+<!DOCTYPE>
+<html>
+<head>
+<title>Student Registration Form</title>
+<style>
+body {
+    font-family: Arial;
+    background: #f2f2f2;
+}
+
+form {
+    width: 300px;
+    margin: 50px auto;
+    padding: 20px;
+    background: white;
+    border radius: 10px;
+    box shadow: 0 0 10px;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    margin: 6px;
+    box sizing: border box;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+h2 {
+    text-align: center;
+}
+</style>
+
+</head>
+<body>
+<h2>Student Registration Form</h2>
+
+<form>
+<label>Full Name:</label>
+<input type ="text"placeholder ="Enter your Full name"required>
+<br><br>
+
+<label>Email:</label>
+<input type ="text" placeholder ="Enter your Email" required>
+<br><br>
+
+<label>Password:</label>
+<input type ="text" placeholder ="Enter your Password" required>
+<br><br>
+
+<label>Mobile Number:</label>
+<input type ="text" placeholder ="Enter your Mobile Number" required>
+<br><br>
+
+<label>Date of Birth:</label>
+<input type ="text" placeholder ="Enter your Date of Birth" required>
+<br><br>
+
+<input type ="Submit" value ="Register">
+<input type ="Reset" value ="Clear">
+
+<script>
+	function validation()
+		let name = document.getElementByID("name").value;
+		let email = document.getElementByID("email").value;
+		let password = document.getElementByID("password").value;
+		let mobile number = document.getElementByID("mobile number").value;
+		let date of birth = document.getElementByID("date of birth").value;
+
+ if(name == "" || email == "" || password == "" || mobile == "" || dob == "")
+ {
+            alert("Please fill all the fields.");
+            return false;
+        }
+
+        alert("Registration Successful!");
+        return true;
+    }
+		
+</script>
+</form>
+</body>
+</html>

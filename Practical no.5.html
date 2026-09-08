@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Document Object Model</title>
+
+        <style>
+            .box {
+                padding: 20 px;
+                border: 2 px solid black;
+                width: 300 px;
+            }
+            .highlight {
+                background-color: yellow;
+                color: blue;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div id="box" class="box">
+        <h2 id="title">Welcome to my Dom Practical</h2>
+        <p id="message">by Suraj Jadhav (SY-A)</p>
+        <img id="photo" src="file:///C:/Users/HP/Pictures/DOM1.jpg" width="150"></a>
+        <br><br>
+        <a id="link" href=""></a>
+        <br><br>
+        <button onclick="ChangeStyle()">Change Style</button>
+        <button onclick="ChangeClass()">Change Class</button>
+        <button onclick="ChangeImage()">Change Image</button>
+        <button onclick="ChangeLink()">Change Link</button>
+        <button onclick="ChangeContent()">Change Content</button>
+        </div>
+        <script>
+            function ChangeContent(){
+                document.getElementById("title").innerHTML="JavaScript DOM Manipulation";
+                document.getElementById("message").innerHTML="Content changed dynamically using JavaScript.";
+            }
+            function ChangeStyle(){
+                let message=document.getElementById("message");
+                message.style.color="red";
+                message.style.fontSize="24px";
+                message.style.fontWeight="bold";
+            }
+            function ChangeImage(){
+                document.getElementById("photo").setAttribute("src","file:///C:/Users/HP/Pictures/DOM-Tree1.jpg");
+            }
+            function ChangeLink(){
+                document.getElementById("link").setAttribute("href","https://www.wikipedia.org/");
+                document.getElementById("link").innerHTML="Visit Wikipedia";
+            }
+            function ChangeClass(){
+                document.getElementById("box").classList.toggle("highlight");
+            }
+        </script>
+    </body>
+</html>
